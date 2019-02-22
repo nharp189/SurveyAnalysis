@@ -179,10 +179,10 @@ Sex<- survey.data[,c(20)]
 survey.data$Sex <-Sex
 ###Race: Native American 1, Asian 2, Hawaiian/Pacific Islander 3, Black/African American 4, White 5, More than one race 6, Asian 7(?)###
 Race<- survey.data[,c(21)]
-survey.data$race <-Race
+survey.data$Race <-Race
 ###Ethnicity: 1: Hispanic or Latino. 2: Not hispanic or latino###
 Ethnicity <- survey.data[,c(22)]
-survey.data$ethnicity <-Ethnicity
+survey.data$Ethnicity <-Ethnicity
 ###Age###
 Age <- survey.data[,c(19)]
 survey.data$Age <-Age
@@ -193,7 +193,7 @@ survey.data$PsychologicalDisorders <- Psych
 Class <- survey.data[,c(26)]
 survey.data$Class <-Class
 ###Residence: 1 for Residence Hall, 2 for Off-campus housing, 3 for frat/sorority, 4 for home###
-survey.data$Residence
+survey.data$Residence <- survey.data[,c(27)]
 
 ###Scores at end###
 survey.data$IRQ <-  (rowSums(IRQ[,c("Q.IRQ_1", "Q.IRQ_2", "Q.IRQ_3","Q.IRQ_4", "Q.IRQ_5","Q.IRQ_6","Q.IRQ_7","Q.IRQ_8","Q.IRQ_9","Q.IRQ_10","Q.IRQ_11","Q.IRQ_12","Q.IRQ_13","Q.IRQ_14","Q.IRQ_15")]))
@@ -213,7 +213,7 @@ survey.data$ERQ_CR <-  (rowSums(ERQ[,c("Q.ERQ_1", "Q.ERQ_3", "Q.ERQ_5",
                         na.rm = FALSE)  / 6)
 survey.data$ERQ_ES <- ( rowSums(ERQ[,c("Q.ERQ_2", "Q.ERQ_4", "Q.ERQ_6", 
                                "Q.ERQ_9")], 
-                        na.rm = FALSE) / 4 )
+                        na.rm = FALSE) / 4   )
 survey.data$IUS <-  (rowSums(IUS[,c("Q.IUS_1", "Q.IUS_2", "Q.IUS_3","Q.IUS_4", "Q.IUS_5","Q.IUS_6","Q.IUS_7","Q.IUS_8","Q.IUS_9","Q.IUS_10","Q.IUS_11","Q.IUS_12")]))
 survey.data$SWLS <- (rowSums(SWLS[,c("Q.SWLS_1", "Q.SWLS_2", "Q.SWLS_3","Q.SWLS_4", "Q.SWLS_5")]))
 
