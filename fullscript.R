@@ -231,40 +231,58 @@ write.csv(questionnaire.data,'combinedscores.csv')
 ### create val_rate dataframe, average IAPS with faces for total val_rate ###
 questionnaire.data$val_rate <- rowMeans(questionnaire.data[c('sur_rate', 'amb_rate')], na.rm=TRUE)
 
-###Plots###
+
+###         Plots         ###
+
 
 ###     IRQ     ###
 
 ###Plot questionnaire.data against IRQ###
-plot(questionnaire.data$IRQ, questionnaire.data$val_rate)
+pdf("plots.pdf")
+plot(questionnaire.data$IRQ, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with IRQ Score",
+     ylab = "Valence Score",
+     xlab = "IRQ Score" )
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$IRQ))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$IRQ)
 
 ###Plot questionnaire.data against IRQNT###
-plot(questionnaire.data$IRQNT, questionnaire.data$val_rate)
+plot(questionnaire.data$IRQNT, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with IRQNT Score",
+     ylab = "Valence Score",
+     xlab = "IRQNT Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$IRQNT))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$IRQNT)
 
 ###Plot questionnaire.data against IRQNE###
-plot(questionnaire.data$IRQNE, questionnaire.data$val_rate)
+plot(questionnaire.data$IRQNE, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with IRQNE Score",
+     ylab = "Valence Score",
+     xlab = "IRQNE Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$IRQNE))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$IRQNE)
 
 ###Plot questionnaire.data against IRQPT###
-plot(questionnaire.data$IRQPT, questionnaire.data$val_rate)
+plot(questionnaire.data$IRQPT, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with IRQPT Score",
+     ylab = "Valence Score",
+     xlab = "IRQPT Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$IRQPT))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$IRQPT)
 
 ###Plot questionnaire.data against IRQPE###
-plot(questionnaire.data$IRQPE, questionnaire.data$val_rate)
+plot(questionnaire.data$IRQPE, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with IRQPE Score",
+     ylab = "Valence Score",
+     xlab = "IRQPE Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$IRQPE))
 ###Line characteristics, if desired###
@@ -272,14 +290,20 @@ lm(questionnaire.data$val_rate ~ questionnaire.data$IRQPE)
 
 ###     STAIS/STAIT     ###
 ###Plot questionnaire.data against STAIS###
-plot(questionnaire.data$STAIS, questionnaire.data$val_rate)
+plot(questionnaire.data$STAIS, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with STAIS Score",
+     ylab = "Valence Score",
+     xlab = "STAIS Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$STAIS))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$STAIS)
 
 ###Plot questionnaire.data against STAIT###
-plot(questionnaire.data$STAIT, questionnaire.data$val_rate)
+plot(questionnaire.data$STAIT, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with STAIT Score",
+     ylab = "Valence Score",
+     xlab = "STAIT Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$STAIT))
 ###Line characteristics, if desired###
@@ -288,35 +312,50 @@ lm(questionnaire.data$val_rate ~ questionnaire.data$STAIT)
 ###     FFMQ      ###
 
 ###Plot questionnaire.data against FFMQ_Ob###
-plot(questionnaire.data$FFMQ_Ob, questionnaire.data$val_rate)
+plot(questionnaire.data$FFMQ_Ob, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with FFMQ_Ob Score",
+     ylab = "Valence Score",
+     xlab = "FFMQ_Ob Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Ob))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Ob)
 
 ###Plot questionnaire.data against FFMQ_Ds###
-plot(questionnaire.data$FFMQ_Ds, questionnaire.data$val_rate)
+plot(questionnaire.data$FFMQ_Ds, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with FFMQ_Ds Score",
+     ylab = "Valence Score",
+     xlab = "FFMQ_Ds Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Ds))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Ds)
 
 ###Plot questionnaire.data against FFMQ_Aw###
-plot(questionnaire.data$FFMQ_Aw, questionnaire.data$val_rate)
+plot(questionnaire.data$FFMQ_Aw, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with FFMQ_Aw Score",
+     ylab = "Valence Score",
+     xlab = "FFMQ_Aw Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Aw))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Aw)
 
 ###Plot questionnaire.data against FFMQ_Nj###
-plot(questionnaire.data$FFMQ_Nj, questionnaire.data$val_rate)
+plot(questionnaire.data$FFMQ_Nj, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with FFMQ_Nj Score",
+     ylab = "Valence Score",
+     xlab = "FFMQ_Nj Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Nj))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Nj)
 
 ###Plot questionnaire.data against FFMQ_Nr###
-plot(questionnaire.data$FFMQ_Nr, questionnaire.data$val_rate)
+plot(questionnaire.data$FFMQ_Nr, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with FFMQ_Nr Score",
+     ylab = "Valence Score",
+     xlab = "FFMQ_Nr Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Nr))
 ###Line characteristics, if desired###
@@ -325,14 +364,20 @@ lm(questionnaire.data$val_rate ~ questionnaire.data$FFMQ_Nr)
 ###     ERQ     ###
 
 ###Plot questionnaire.data against ERQ_CR###
-plot(questionnaire.data$ERQ_CR, questionnaire.data$val_rate)
+plot(questionnaire.data$ERQ_CR, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with ERQ_CR Score",
+     ylab = "Valence Score",
+     xlab = "ERQ_CR Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$ERQ_CR))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$ERQ_CR)
 
 ###Plot questionnaire.data against ERQ_ES###
-plot(questionnaire.data$ERQ_ES, questionnaire.data$val_rate)
+plot(questionnaire.data$ERQ_ES, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with ERQ_ES Score",
+     ylab = "Valence Score",
+     xlab = "ERQ_ES Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$ERQ_ES))
 ###Line characteristics, if desired###
@@ -341,7 +386,10 @@ lm(questionnaire.data$val_rate ~ questionnaire.data$ERQ_ES)
 ###     IUS     ###
 
 ###Plot questionnaire.data against IUS###
-plot(questionnaire.data$IUS, questionnaire.data$val_rate)
+plot(questionnaire.data$IUS, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with IUS Score",
+     ylab = "Valence Score",
+     xlab = "IUS Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$IUS))
 ###Line characteristics, if desired###
@@ -351,8 +399,12 @@ lm(questionnaire.data$val_rate ~ questionnaire.data$IUS)
 ###     SWLS      ###
 
 ###Plot questionnaire.data against SWLS###
-plot(questionnaire.data$SWLS, questionnaire.data$val_rate)
+plot(questionnaire.data$SWLS, questionnaire.data$val_rate, 
+     main="Val_Rate Correlation with SWLS Score",
+     ylab = "Valence Score",
+     xlab = "SWLS Score")
 ###do line of best fit###
 abline(lm(questionnaire.data$val_rate ~ questionnaire.data$SWLS))
 ###Line characteristics, if desired###
 lm(questionnaire.data$val_rate ~ questionnaire.data$SWLS)
+dev.off()
